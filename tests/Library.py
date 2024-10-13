@@ -11,3 +11,7 @@ def add_book(book: List):
         return "Book already exists"
     books[id] = book
     return books[id]
+
+
+def view_avalable_books():
+    books_list = []
