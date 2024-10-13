@@ -36,6 +36,6 @@ class TestLibrary(unittest.TestCase):
 
     def test_return_book(self):
         book = ["45679123", "You are born to blossom", "APJ Abdul Kalam", 2010]
+        self.assertEqual(return_book("45679123", book), "Book not found to return")
         add_book(book)
         borrow_books("45679123")
-        self.assertEqual(return_book("45679123"), "Book not found to return")

@@ -31,5 +31,6 @@ def borrow_books(book_id):
     return "Book not found to borrow"
 
 
-def return_book(book_id):
-    return None
+def return_book(book_id, book):
+    if book_id not in books:
+        return "Book not found to return"
