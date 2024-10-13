@@ -31,3 +31,5 @@ class TestLibrary(unittest.TestCase):
                 2012,
             ],
         )
+        self.assertEqual(borrow_books("12345609"), "Book not found to borrow")
+        self.assertEqual(borrow_books("987654321"), "Book Is not available to borrow")
