@@ -7,5 +7,7 @@ books = {
 
 def add_book(book: List):
     id = book[0]
+    if id in books:
+        return "Book already exists"
     books[id] = book
     return books[id]
