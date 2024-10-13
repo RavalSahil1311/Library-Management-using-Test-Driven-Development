@@ -15,3 +15,6 @@ def add_book(book: List):
 
 def view_avalable_books():
     books_list = []
+    for book in books.values():
+        books_list.append(book)
+    return books_list
