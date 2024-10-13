@@ -23,6 +23,9 @@ def view_avalable_books():
 def borrow_books(book_id):
     if book_id in books:
         book = books[book_id]
+        if book == False:
+            return "Book Is not available to borrow"
         books.pop(book_id)
+        books[book_id] = False
         return book
     return "Book not found to borrow"
