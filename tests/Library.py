@@ -34,3 +34,5 @@ def borrow_books(book_id):
 def return_book(book_id, book):
     if book_id not in books:
         return "Book not found to return"
+    books[book_id] = book
+    return "Book returned successfully"
