@@ -39,3 +39,4 @@ class TestLibrary(unittest.TestCase):
         self.assertEqual(return_book("45679123", book), "Book not found to return")
         add_book(book)
         borrow_books("45679123")
+        self.assertEqual(return_book("45679123", book), "Book returned successfully")
