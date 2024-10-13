@@ -18,3 +18,7 @@ def view_avalable_books():
     for book in books.values():
         books_list.append(book)
     return books_list
+
+
+def borrow_books(book_id):
+    return None

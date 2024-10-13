@@ -1,5 +1,5 @@
 import unittest
-from Library import add_book, view_avalable_books, books
+from Library import add_book, view_avalable_books, borrow_books, books
 
 
 class TestLibrary(unittest.TestCase):
@@ -16,3 +16,18 @@ class TestLibrary(unittest.TestCase):
         for book in books.values():
             books_list.append(book)
         self.assertEqual(view_avalable_books(), books_list)
+
+    def test_borrow_books(self):
+        total_books = len(view_avalable_books())
+        add_book(
+            ["987654321", "Adventures of Sherlock Holmes", "Benedict CumberBatch", 2012]
+        )
+        self.assertEqual(
+            borrow_books("987654321"),
+            [
+                "987654321",
+                "Adventures of Sherlock Holmes",
+                "Benedict CumberBatch",
+                2012,
+            ],
+        )
