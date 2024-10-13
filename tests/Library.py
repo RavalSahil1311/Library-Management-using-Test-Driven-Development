@@ -29,3 +29,7 @@ def borrow_books(book_id):
         books[book_id] = False
         return book
     return "Book not found to borrow"
+
+
+def return_book(book_id):
+    return None

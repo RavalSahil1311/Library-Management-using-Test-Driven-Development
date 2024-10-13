@@ -1,5 +1,5 @@
 import unittest
-from Library import add_book, view_avalable_books, borrow_books, books
+from Library import add_book, view_avalable_books, borrow_books, return_book, books
 
 
 class TestLibrary(unittest.TestCase):
@@ -33,3 +33,9 @@ class TestLibrary(unittest.TestCase):
         )
         self.assertEqual(borrow_books("12345609"), "Book not found to borrow")
         self.assertEqual(borrow_books("987654321"), "Book Is not available to borrow")
+
+    def test_return_book(self):
+        book = ["45679123", "You are born to blossom", "APJ Abdul Kalam", 2010]
+        add_book(book)
+        borrow_books("45679123")
+        self.assertEqual(return_book("45679123"), "Book not found to return")
