@@ -7,4 +7,6 @@ books = {
 
 
 def add_book(book: List):
-    return None
+    id = book[0]
+    books[id] = book
+    return books[id]
